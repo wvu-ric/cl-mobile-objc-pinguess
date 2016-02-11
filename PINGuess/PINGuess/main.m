@@ -24,10 +24,17 @@ int main(int argc, const char * argv[]) {
          [pinNumber isEqualToString:formatted]
          
         */
-            
         
+        int i = 5412;
+  
         
+        NSString *pinString = [NSString stringWithFormat:@"%d", i];
+        
+        if ([pinNumber isEqualToString:pinString])
+            NSLog(@"The pin number is %i", i);
         
     }
+
+
     return 0;
 }
