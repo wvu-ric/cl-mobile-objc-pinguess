@@ -24,8 +24,18 @@ int main(int argc, const char * argv[]) {
          [pinNumber isEqualToString:formatted]
          
         */
-            
         
+        for ( int i = 0; i < 10000; i++ ) {
+            NSString *formatted = [NSString stringWithFormat:@"%04d",i];
+            if ([pinNumber isEqualToString:formatted]) {
+                NSLog(@"The pin number is: %@", formatted);
+                break;
+            }
+            if ([pinNumber isEqualToString:@"9999"]) {
+                NSLog(@"PinGuess exited unsuccessfully. All combinations attempted.");
+                break;
+            }
+        }
         
         
     }
